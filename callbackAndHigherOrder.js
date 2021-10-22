@@ -152,6 +152,12 @@ console.log(uniq(names, recall))
 
 // CODE HERE 
 
+const each = (arr, callback) => {
+  arr.forEach((nameX, index) => {
+    console.log(nameX, index)
+    callback(nameX, index)
+  })
+}
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -162,6 +168,9 @@ console.log(uniq(names, recall))
 
 // CODE HERE
 
+const nameList = (item, index) => `The item at index ${index} is ${item}.`
+
+console.log(each(names,nameList))
 
 ////////// PROBLEM 7 //////////
 
